@@ -57,7 +57,6 @@ public class AttackingEnemy : MonoBehaviour
 
     private void ShotPlayer() 
     {
-        Debug.Log("Shoot");
         var bullet = _objectPooler.GetObject<EnemyBullet>();
         bullet.SetBuletToStartPosition(_startBullet);
         bullet.Shoot(_startBullet.position,_player.position);

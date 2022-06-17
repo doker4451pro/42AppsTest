@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e8f10fa6994e4aabb56a69832ff50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shotAction: {fileID: 8699323190754756234, guid: 21dc1aba97fb37d4898ca4a57e66f201, type: 3}
+  _shootAction: {fileID: 8699323190754756234, guid: 21dc1aba97fb37d4898ca4a57e66f201, type: 3}
 --- !u!23 &178072127
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -662,11 +662,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _poolObjectsList:
+  - Name: PlayerBullet
+    ObjectToPool: {fileID: 6068232648821053680, guid: e9385ab94762a2d4999acd35291eabce, type: 3}
+    StartCapacity: 10
   - Name: EnemyBullet
     ObjectToPool: {fileID: 7054045782606853309, guid: 5cfef14455f5c2740b427ed2c29d8bc7, type: 3}
-    StartCapacity: 10
-  - Name: PlayerBullet
-    ObjectToPool: {fileID: 2975263762003589956, guid: e9385ab94762a2d4999acd35291eabce, type: 3}
     StartCapacity: 10
 --- !u!1 &705507993
 GameObject:
@@ -1281,6 +1281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}

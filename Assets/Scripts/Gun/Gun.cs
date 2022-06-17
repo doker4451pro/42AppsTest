@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -5,16 +6,16 @@ using Zenject;
 public class Gun : MonoBehaviour
 {
     [Inject] private ObjectPooler _objectPooler;
-    [SerializeField] private InputActionReference _shotAction;
+    [SerializeField] private InputActionReference _shootAction;
 
-    private void Awake()
+    private void Start()
     {
-        _shotAction.action.started += Shot;
+        _shootAction.action.started += Shoot;
     }
 
-    private void Shot(InputAction.CallbackContext obj)
+    private void Shoot(InputAction.CallbackContext context)
     {
-        var bullet=_objectPooler.GetObject<PlayerBullet>();
+        var bullet = _objectPooler.GetObject<PlayerBullet>();
         bullet.SetBuletToStartPosition(transform);
         bullet.Shoot(transform.forward);
     }

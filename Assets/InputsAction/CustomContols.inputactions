@@ -11,7 +11,8 @@
                     "id": "ce1518c8-6d14-4c7e-ad04-18db2e4046bb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MouseDelta",
@@ -19,7 +20,8 @@
                     "id": "1fba87a0-02f0-4c24-8b1a-bf8022808225",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Shoot",
@@ -27,7 +29,8 @@
                     "id": "3da83b4a-08b6-426d-9b67-2c4fa1a98b19",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
