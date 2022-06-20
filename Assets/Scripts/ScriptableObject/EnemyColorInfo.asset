@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a932e359cb3f6448e1f2e3fa919b8a, type: 3}
   m_Name: EnemyColorInfo
   m_EditorClassIdentifier: 
-  _defaltColor: {r: 1, g: 0, b: 0, a: 1}
-  _highlightColot: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  _defaltColorMaterial: {fileID: 2100000, guid: 390292c6056bdb54b989f32ba67a5997, type: 2}
+  _highlightColotMateral: {fileID: 2100000, guid: 4d47781ea4dd23d4596958b1197382d2, type: 2}

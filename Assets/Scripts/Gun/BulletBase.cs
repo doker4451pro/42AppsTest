@@ -2,12 +2,12 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody))]
-public class BulletBase : MonoBehaviour, IPoolObject
+public abstract class BulletBase : MonoBehaviour, IPoolObject
 {
     [SerializeField, Range(100, 1000)] private float _speed = 150;
     private Rigidbody _rigidbody;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }

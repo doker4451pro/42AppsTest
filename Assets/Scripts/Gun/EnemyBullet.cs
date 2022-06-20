@@ -1,9 +1,7 @@
 using UnityEngine;
 
+
+//TODO если нужно дополнить поведение объекта
 public class EnemyBullet : BulletBase
 {
-    protected override void OnCollisionEnter(Collision collision)
-    {
-        base.OnCollisionEnter(collision);
-    }
 }

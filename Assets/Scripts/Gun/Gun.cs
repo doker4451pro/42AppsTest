@@ -5,17 +5,25 @@ using Zenject;
 
 public class Gun : MonoBehaviour
 {
-    [Inject] private ObjectPooler _objectPooler;
-    [SerializeField] private InputActionReference _shootAction;
+    public event Action OnShotAction;
 
-    private void Start()
+    [Inject] private ObjectPooler _objectPooler;
+    [SerializeField] private InputActionReference _shotAction;
+
+    private void Awake()
     {
-        _shootAction.action.started += Shoot;
+        _shotAction.action.started += Shot;
     }
 
-    private void Shoot(InputAction.CallbackContext context)
+    private void OnDisable()
     {
-        var bullet = _objectPooler.GetObject<PlayerBullet>();
+        _shotAction.action.started -= Shot;
+    }
+
+    private void Shot(InputAction.CallbackContext obj)
+    {
+        OnShotAction.WriteLog(LogState.Shot)?.Invoke();
+        var bullet=_objectPooler.GetObject<PlayerBullet>();
         bullet.SetBuletToStartPosition(transform);
         bullet.Shoot(transform.forward);
     }

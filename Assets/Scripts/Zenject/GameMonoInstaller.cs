@@ -5,6 +5,7 @@ public class GameMonoInstaller : MonoInstaller
 {
     [SerializeField] private ObjectPooler _objectPooler;
     [SerializeField] private Searcher _searcher;
+    [SerializeField] private LevelRepeater _levelRepeater;
 
     public override void InstallBindings()
     {
@@ -14,6 +15,10 @@ public class GameMonoInstaller : MonoInstaller
 
         Container.Bind<Searcher>()
             .FromInstance(_searcher)
+            .AsSingle();
+
+        Container.Bind<LevelRepeater>()
+            .FromInstance(_levelRepeater)
             .AsSingle();
     }
 }

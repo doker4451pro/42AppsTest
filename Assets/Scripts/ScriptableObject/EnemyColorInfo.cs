@@ -4,9 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New EnemyColorInfo", menuName = "Enemy Color Info", order = 51)]
 public class EnemyColorInfo : ScriptableObject
 {
-    [SerializeField] private Color _defaltColor = Color.red;
-    [SerializeField] private Color _highlightColot = Color.yellow;
+    [SerializeField] private Material _defaltColorMaterial;
+    [SerializeField] private Material _highlightColotMateral;
 
-    public Color DefaltColor { get { return _defaltColor; } }
-    public Color HighlightColor { get { return _highlightColot; } }
+    public Material DefaltColor { get { return _defaltColorMaterial; } }
+    public Material HighlightColor { get { return _highlightColotMateral; } }
 }

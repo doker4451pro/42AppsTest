@@ -3,7 +3,7 @@ using UnityEngine;
 public class ColorEnemy : MonoBehaviour
 {
     [SerializeField] private EnemyColorInfo _colorInfo;
-    [SerializeField] private Material _material;
+    [SerializeField] private MeshRenderer _meshRenderer;
 
     private bool _isHighlightNow;
 
@@ -14,7 +14,7 @@ public class ColorEnemy : MonoBehaviour
             if (_isHighlightNow != value)
             {
                 _isHighlightNow = value;
-                _material.color = _isHighlightNow ? _colorInfo.HighlightColor : _colorInfo.DefaltColor;
+                _meshRenderer.material = _isHighlightNow ? _colorInfo.HighlightColor : _colorInfo.DefaltColor;
             }
         }
     }
