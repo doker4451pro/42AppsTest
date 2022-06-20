@@ -26,3 +26,5 @@
 попадание в агента, фейл, победа. Лог сохранить в текстовый файл.
 ***
 [Тестовое задание для Unity-разработчика (1).pdf](https://github.com/doker4451pro/42AppsTest/files/8942107/Unity-.1.pdf)
+***
+Собранный проект https://disk.yandex.ru/d/kk71MLJT4548gQ
